@@ -104,7 +104,7 @@ const HAS_FOLLOWING_UPSELLS = true;
 
 // Select non-VIP campaign for checkout
 const getVrioCampaignInfoBasedOnPaymentMethod = (isVipUpsell) => {
-    const vrioCampaigns = [{"_id":"6a0af35f875dd303efaafdcc","integration":[{"_id":"685435949a3a8c5ffb4854ef","workspace":"develop","platform":"vrio","description":"dev, team api","fields":{"publicApiKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwib3JnYW5pemF0aW9uIjoibXZtdHNhbmRib3gudnJpbyIsImlkIjoiNTQxNzM0MWMtOTI3ZS00YTc5LTk5MTQtMzcxM2IyM2RlMTNlIiwiaWF0IjoxNzUwMDk4ODg1LCJhdWQiOiJ1cm46dnJpbzphcGk6dXNlciIsImlzcyI6InVybjp2cmlvOmFwaTphdXRoZW50aWNhdG9yIiwic3ViIjoidXJuOnZyaW86YXBpOjE4In0.z4qwr2v87T3wq73w1nT8aSASKIMVLnL0HX1E-2tavrs"},"status":"active","createdAt":1750335264215,"updatedAt":1750349204667,"__v":0,"category":"CRM","id":"685435949a3a8c5ffb4854ef"}],"externalId":"39","name":"test-campaign","currency":"USD","countries":[223,38],"metadata":{"campaign_id":39,"campaign_name":"","payment_type_id":1,"campaign_active":true,"campaign_prepaid":true,"campaign_payment_method_required":true,"campaign_group_transactions":true,"campaign_global_js":"","campaign_global_seo_title":"","campaign_global_seo_keywords":"","campaign_global_seo_description":"","date_created":"2026-05-18 11:09:19","created_by":0,"date_modified":"2026-05-18 11:09:19","modified_by":0,"campaign_notes":"","offers":[],"shipping_profiles":[],"campaignId":"39","externalId":39,"description":"","payment_methods":["amex","discover","visa","master"],"alternative_payments":[],"countries":[{"iso_numeric":840,"calling_code":"1","id":223,"name":"United States of America","iso_2":"US","iso_3":"USA"},{"iso_numeric":124,"calling_code":"1","id":38,"name":"Canada","iso_2":"CA","iso_3":"CAN"}]},"funnels":[],"createdAt":1779088995965,"updatedAt":1779102559878,"packages":[],"status":"active","platform":"vrio","__v":0,"id":"6a0af35f875dd303efaafdcc"}];
+    const vrioCampaigns = [{"_id":"6a0af35f875dd303efaafdcc","integration":[{"_id":"685435949a3a8c5ffb4854ef","workspace":"develop","platform":"vrio","description":"dev, team api","fields":{"publicApiKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwib3JnYW5pemF0aW9uIjoibXZtdHNhbmRib3gudnJpbyIsImlkIjoiNTQxNzM0MWMtOTI3ZS00YTc5LTk5MTQtMzcxM2IyM2RlMTNlIiwiaWF0IjoxNzUwMDk4ODg1LCJhdWQiOiJ1cm46dnJpbzphcGk6dXNlciIsImlzcyI6InVybjp2cmlvOmFwaTphdXRoZW50aWNhdG9yIiwic3ViIjoidXJuOnZyaW86YXBpOjE4In0.z4qwr2v87T3wq73w1nT8aSASKIMVLnL0HX1E-2tavrs"},"status":"active","createdAt":1750335264215,"updatedAt":1750349204667,"__v":0,"category":"CRM","id":"685435949a3a8c5ffb4854ef"}],"externalId":"39","name":"test-campaign","currency":"USD","countries":[223,38],"metadata":{"campaign_id":39,"campaign_name":"","payment_type_id":1,"campaign_active":true,"campaign_prepaid":true,"campaign_payment_method_required":true,"campaign_group_transactions":true,"campaign_global_js":"","campaign_global_seo_title":"","campaign_global_seo_keywords":"","campaign_global_seo_description":"","date_created":"2026-05-18 11:09:19","created_by":0,"date_modified":"2026-05-18 11:09:19","modified_by":0,"campaign_notes":"","offers":[],"shipping_profiles":[],"campaignId":"39","externalId":39,"description":"","payment_methods":["amex","discover","visa","master"],"alternative_payments":[],"countries":[{"iso_numeric":840,"calling_code":"1","id":223,"name":"United States of America","iso_2":"US","iso_3":"USA"},{"iso_numeric":124,"calling_code":"1","id":38,"name":"Canada","iso_2":"CA","iso_3":"CAN"}]},"funnels":[],"createdAt":1779088995965,"updatedAt":1779102559878,"packages":[],"status":"active","platform":"vrio","__v":0,"id":"6a0af35f875dd303efaafdcc"},{"_id":"696a4531a531c62359271f0b","integration":[{"_id":"685435949a3a8c5ffb4854ef","workspace":"develop","platform":"vrio","description":"dev, team api","fields":{"publicApiKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwib3JnYW5pemF0aW9uIjoibXZtdHNhbmRib3gudnJpbyIsImlkIjoiNTQxNzM0MWMtOTI3ZS00YTc5LTk5MTQtMzcxM2IyM2RlMTNlIiwiaWF0IjoxNzUwMDk4ODg1LCJhdWQiOiJ1cm46dnJpbzphcGk6dXNlciIsImlzcyI6InVybjp2cmlvOmFwaTphdXRoZW50aWNhdG9yIiwic3ViIjoidXJuOnZyaW86YXBpOjE4In0.z4qwr2v87T3wq73w1nT8aSASKIMVLnL0HX1E-2tavrs"},"status":"active","createdAt":1750335264215,"updatedAt":1750349204667,"__v":0,"category":"CRM","id":"685435949a3a8c5ffb4854ef"}],"externalId":"39","name":"Vi-Shift - Network - (1)","currency":"USD","countries":[223,38],"metadata":{"campaign_id":39,"campaign_name":"","payment_type_id":1,"campaign_active":true,"campaign_prepaid":true,"campaign_payment_method_required":true,"campaign_group_transactions":true,"campaign_global_js":"","campaign_global_seo_title":"","campaign_global_seo_keywords":"","campaign_global_seo_description":"","date_created":"2026-01-16 14:32:16","created_by":0,"date_modified":"2026-01-16 14:32:16","modified_by":0,"campaign_notes":"","offers":[],"shipping_profiles":[],"campaignId":"39","externalId":39,"description":"","payment_methods":["amex","discover","visa","master"],"alternative_payments":[],"countries":[{"iso_numeric":840,"calling_code":"1","id":223,"name":"United States of America","iso_2":"US","iso_3":"USA"},{"iso_numeric":124,"calling_code":"1","id":38,"name":"Canada","iso_2":"CA","iso_3":"CAN"}]},"funnels":[],"createdAt":1768339039473,"updatedAt":1768573936154,"packages":[],"status":"active","platform":"vrio","__v":0,"id":"696a4531a531c62359271f0b"}];
 
     const vrioIntegration = vrioCampaigns.find(({ integration }) =>
       integration.find((int) => int.platform === 'vrio'),
@@ -614,7 +614,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
         ?.getAttribute("data-shipping-profile-id") || undefined;
 
   const orderData = {
-    pageId: "zzIed5iwoLh0AJ-8XHQAiGyCs-zPDXRju9H3yTT5VSZM4OouqO8CZwHZjn05hj1R",
+    pageId: "__oRaAv_8V3xkTLkcbc4Jc0AdbrNo5vqGBVw_KmJscO99KLbjbM4WEfkm01P317B",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
@@ -1410,7 +1410,7 @@ async function createOrderViaPaypal(isExpress = false) {
   const shippingProfileId = +document.querySelector(`[data-product-id="${selectedProduct.id}"]`)?.getAttribute('data-shipping-profile-id') || undefined;
   const sameAddress = isSameAddress();
   const orderData = {
-    pageId: "zzIed5iwoLh0AJ-8XHQAiGyCs-zPDXRju9H3yTT5VSZM4OouqO8CZwHZjn05hj1R",
+    pageId: "__oRaAv_8V3xkTLkcbc4Jc0AdbrNo5vqGBVw_KmJscO99KLbjbM4WEfkm01P317B",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -1710,7 +1710,7 @@ async function createOrderViaKlarna() {
   const sameAddress = isSameAddress();
 
   const orderData = {
-    pageId: "zzIed5iwoLh0AJ-8XHQAiGyCs-zPDXRju9H3yTT5VSZM4OouqO8CZwHZjn05hj1R",
+    pageId: "__oRaAv_8V3xkTLkcbc4Jc0AdbrNo5vqGBVw_KmJscO99KLbjbM4WEfkm01P317B",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
     email: email,
@@ -2089,7 +2089,7 @@ async function createOrderViaCreditCard() {
   let orderTotal = Math.max(0, Number(selectedProduct.price) * selectedProduct.quantity);
 
   const orderData = {
-    pageId: "zzIed5iwoLh0AJ-8XHQAiGyCs-zPDXRju9H3yTT5VSZM4OouqO8CZwHZjn05hj1R",
+    pageId: "__oRaAv_8V3xkTLkcbc4Jc0AdbrNo5vqGBVw_KmJscO99KLbjbM4WEfkm01P317B",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -4349,7 +4349,7 @@ async function returnPaypal() {
 ;
 
     const body = {
-        pageId: "zzIed5iwoLh0AJ-8XHQAiGyCs-zPDXRju9H3yTT5VSZM4OouqO8CZwHZjn05hj1R",
+        pageId: "__oRaAv_8V3xkTLkcbc4Jc0AdbrNo5vqGBVw_KmJscO99KLbjbM4WEfkm01P317B",
         action: "process",
         campaign_id: CAMPAIGN_ID,
         connection_id: 1,
