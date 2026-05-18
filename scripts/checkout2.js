@@ -614,7 +614,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
         ?.getAttribute("data-shipping-profile-id") || undefined;
 
   const orderData = {
-    pageId: "M9hhCGFZenOaR8duJJEP8zmZQ1H1XIRTZxBWrWTXzGg6UQnm4Ru3q4yf9BrxYUE1",
+    pageId: "EPuv3mFYV5Sxemqq-KUf9yv9eO8H_SoHF5dPj5XgrdWUkAo4BAEApZw0iMq3p556",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
@@ -790,7 +790,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
     console.error("Error validating and sending to Klaviyo", error);
   }
   MVMT.track("ORDER_SUBMITTED", {
-    page: "checkout",
+    page: "checkout2",
     page_type: "Checkout",
     page_url: window.location.href,
     order_data: sanitizedOrderData,
@@ -816,7 +816,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
       handlePaymentDecline();
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -845,7 +845,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
       );
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -862,7 +862,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
         handleSystemError(errorCode);
         if (window.MVMT) {
           MVMT.track("ORDER_ERROR", {
-            page: "checkout",
+            page: "checkout2",
             page_type: "Checkout",
             page_url: window.location.href,
             order_data: sanitizedOrderData,
@@ -882,7 +882,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
 
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -917,7 +917,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
       console.error("Error sending order events to Klaviyo", error);
     }
     MVMT.track("ORDER_SUCCESS", {
-      page: "checkout",
+      page: "checkout2",
       page_type: "Checkout",
       page_url: window.location.href,
       order_data: sanitizedOrderData,
@@ -1410,7 +1410,7 @@ async function createOrderViaPaypal(isExpress = false) {
   const shippingProfileId = +document.querySelector(`[data-product-id="${selectedProduct.id}"]`)?.getAttribute('data-shipping-profile-id') || undefined;
   const sameAddress = isSameAddress();
   const orderData = {
-    pageId: "M9hhCGFZenOaR8duJJEP8zmZQ1H1XIRTZxBWrWTXzGg6UQnm4Ru3q4yf9BrxYUE1",
+    pageId: "EPuv3mFYV5Sxemqq-KUf9yv9eO8H_SoHF5dPj5XgrdWUkAo4BAEApZw0iMq3p556",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -1609,7 +1609,7 @@ async function createOrderViaPaypal(isExpress = false) {
     console.error("Error validating and sending to Klaviyo", error);
   }
   MVMT.track("ORDER_SUBMITTED", {
-    page: "checkout",
+    page: "checkout2",
     page_type: "Checkout",
     page_url: window.location.href,
     order_data: sanitizedOrderData,
@@ -1710,7 +1710,7 @@ async function createOrderViaKlarna() {
   const sameAddress = isSameAddress();
 
   const orderData = {
-    pageId: "M9hhCGFZenOaR8duJJEP8zmZQ1H1XIRTZxBWrWTXzGg6UQnm4Ru3q4yf9BrxYUE1",
+    pageId: "EPuv3mFYV5Sxemqq-KUf9yv9eO8H_SoHF5dPj5XgrdWUkAo4BAEApZw0iMq3p556",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
     email: email,
@@ -1922,7 +1922,7 @@ async function createOrderViaKlarna() {
   }
 
   MVMT.track("ORDER_SUBMITTED", {
-    page: "checkout",
+    page: "checkout2",
     page_type: "Checkout",
     page_url: window.location.href,
     order_data: sanitizedOrderData
@@ -1957,7 +1957,7 @@ async function createOrderViaKlarna() {
         handleSystemError(errorCode);
         if (window.MVMT) {
           MVMT.track("ORDER_ERROR", {
-            page: "checkout",
+            page: "checkout2",
             page_type: "Checkout",
             page_url: window.location.href,
             order_data: sanitizedOrderData,
@@ -1976,7 +1976,7 @@ async function createOrderViaKlarna() {
       showError(msg);
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -2014,7 +2014,7 @@ async function createOrderViaKlarna() {
       showError(msg);
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -2028,7 +2028,7 @@ async function createOrderViaKlarna() {
     showError(i18n.errors.unexpectedError);
     if (window.MVMT) {
       MVMT.track("ORDER_ERROR", {
-        page: "checkout",
+        page: "checkout2",
         page_type: "Checkout",
         page_url: window.location.href,
         order_data: sanitizedOrderData,
@@ -2089,7 +2089,7 @@ async function createOrderViaCreditCard() {
   let orderTotal = Math.max(0, Number(selectedProduct.price) * selectedProduct.quantity);
 
   const orderData = {
-    pageId: "M9hhCGFZenOaR8duJJEP8zmZQ1H1XIRTZxBWrWTXzGg6UQnm4Ru3q4yf9BrxYUE1",
+    pageId: "EPuv3mFYV5Sxemqq-KUf9yv9eO8H_SoHF5dPj5XgrdWUkAo4BAEApZw0iMq3p556",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -2303,7 +2303,7 @@ async function createOrderViaCreditCard() {
     console.log("Sending order to VRIO", { sanitizedOrderData });
   }
   MVMT.track("ORDER_SUBMITTED", {
-    page: "checkout",
+    page: "checkout2",
     page_type: "Checkout",
     page_url: window.location.href,
     order_data: sanitizedOrderData,
@@ -2326,7 +2326,7 @@ async function createOrderViaCreditCard() {
       handlePaymentDecline();
       if (window.MVMT) {
         MVMT.track("ORDER_ERROR", {
-          page: "checkout",
+          page: "checkout2",
           page_type: "Checkout",
           page_url: window.location.href,
           order_data: sanitizedOrderData,
@@ -2347,7 +2347,7 @@ async function createOrderViaCreditCard() {
           handleSystemError(errorCode);
           if (window.MVMT) {
             MVMT.track("ORDER_ERROR", {
-              page: "checkout",
+              page: "checkout2",
               page_type: "Checkout",
               page_url: window.location.href,
               order_data: sanitizedOrderData,
@@ -2363,7 +2363,7 @@ async function createOrderViaCreditCard() {
 
         if (window.MVMT) {
           MVMT.track("ORDER_ERROR", {
-            page: "checkout",
+            page: "checkout2",
             page_type: "Checkout",
             page_url: window.location.href,
             order_data: sanitizedOrderData,
@@ -2374,7 +2374,7 @@ async function createOrderViaCreditCard() {
       }
 
     MVMT.track("ORDER_SUCCESS", {
-      page: "checkout",
+      page: "checkout2",
       page_type: "Checkout",
       page_url: window.location.href,
       order_data: sanitizedOrderData,
@@ -2579,7 +2579,7 @@ async function sendLead() {
     console.log("Sending Lead/Partial to VRIO", { sanitizedOrderData });
   }
   MVMT.track("LEAD_SUBMITTED", {
-    page: "checkout",
+    page: "checkout2",
     page_type: "Checkout",
     page_url: window.location.href,
     order_data: sanitizedOrderData,
@@ -2869,7 +2869,7 @@ if (typeof validateAndSendToKlaviyo === "function") {
       message: "Klaviyo lifecycle: page ready",
       runId: "initial",
       hypothesisId: "KlaviyoLifecycle",
-      data: { pageName: "checkout", pageType: "Checkout" },
+      data: { pageName: "checkout2", pageType: "Checkout" },
     };
     if (klaviyoDebugEnabled && typeof console !== "undefined" && console.log) {
       console.log("[Klaviyo lifecycle] page_ready " + JSON.stringify(pageReadyPayload.data));
@@ -4349,7 +4349,7 @@ async function returnPaypal() {
 ;
 
     const body = {
-        pageId: "M9hhCGFZenOaR8duJJEP8zmZQ1H1XIRTZxBWrWTXzGg6UQnm4Ru3q4yf9BrxYUE1",
+        pageId: "EPuv3mFYV5Sxemqq-KUf9yv9eO8H_SoHF5dPj5XgrdWUkAo4BAEApZw0iMq3p556",
         action: "process",
         campaign_id: CAMPAIGN_ID,
         connection_id: 1,
@@ -4467,7 +4467,7 @@ async function returnPaypal() {
         handlePaymentDecline();
         if (window.MVMT) {
           MVMT.track("ORDER_ERROR", {
-            page: "checkout",
+            page: "checkout2",
             page_type: "Checkout",
             page_url: window.location.href,
             order_data: body,
